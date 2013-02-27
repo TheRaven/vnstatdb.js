@@ -1,0 +1,3 @@
+vnstatdb:
+  http_port: 2500
+  database_file_location: /home/raven/vnstat_dump_eth0.1
