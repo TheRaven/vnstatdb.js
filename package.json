@@ -1,0 +1,12 @@
+{
+  "name": "vnstatdb.js",
+  "version": "0.1.0",
+  "main": "vnstatdb.js",
+  "description": "exposes vnstat's database as json using nodejs",
+  "author": "Yannick Simard <ysimard@gmail.com>",
+  "directories": {"config": "./config"},
+  "dependencies": {
+	"config": "0.4.20",
+	"express": "3.1.0"
+  }
+}
