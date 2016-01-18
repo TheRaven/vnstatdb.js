@@ -22,13 +22,13 @@ function parseLine(line) {
 	var data = line.split(";");
 	
 	var rx = data[3];
-	if(data[0] != "h") {
-		rx = rx * 1024 + parseInt(data[5]);
+	if(data[0] !== "h") {
+		rx = rx * 1024 + parseInt(data[5],10);
 	}
 	
 	var tx = data[4];
-	if(data[0] != "h") {
-		tx = tx * 1024 + parseInt(data[6]);
+	if(data[0] !== "h") {
+		tx = tx * 1024 + parseInt(data[6],10);
 	}
 	
 	return {
@@ -43,7 +43,7 @@ exports.summary = function(req, res) {
 	getLinesInDatabaseFile(CONFIG.database_file_location, [2,3,13,43,55,65], function( err, lines) {
 		var summary = {
 			"interface": lines[0].split(";")[1],
-			"nickname": lines[1].split(";")[1],
+			"nickname": lines[1].split(";")[1]
 		}
 		summary.hour = parseLine(lines[5]);
 		summary.day = parseLine(lines[2]);
