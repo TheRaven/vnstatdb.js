@@ -41,9 +41,6 @@ function parseLine(line) {
 
 exports.summary = function(req, res) {
 	getLinesInDatabaseFile(CONFIG.database_file_location, [2,3,13,43,55,65], function( err, lines) {
-		if (err) {
-			console.log(err);
-		}
 		var summary = {
 			"interface": lines[0].split(";")[1],
 			"nickname": lines[1].split(";")[1]
